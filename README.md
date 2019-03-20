@@ -1,4 +1,4 @@
-# game_snake
+# game_minesweeper
 
 python3.5, pygame
 

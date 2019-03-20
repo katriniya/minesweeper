@@ -2,7 +2,6 @@ import pygame
 import random
 
 pygame.font.init()
-pygame.display.set_caption('MINESWEEPER')
 
 # CHANGE VALUE
 END_COL = 9
@@ -19,7 +18,6 @@ APP_RUNNING = True
 VALUE_GAME_OVER = ''
 FONT = pygame.font.SysFont('Comic Sans MS', END_COL*5)
 COUNT_BOMB = int(END_COL*1.5)
-# COUNT_BOMB = 2
 
 def create_square():
     for i in range(2, (END_COL+1)*50, 50):
@@ -86,6 +84,7 @@ class Game:
         self.gw_surf = FONT.render('YOU WIN', True, pygame.Color(2, 5, 0), pygame.Color(200, 250, 200))
         self.restart = FONT.render('Press R to restart', True, pygame.Color(2, 5, 0), pygame.Color(200, 250, 200))
 
+        pygame.display.set_caption('MINESWEEPER')
         create_square()
 
     def draw_game_over(self, value):
